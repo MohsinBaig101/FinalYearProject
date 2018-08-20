@@ -1,0 +1,69 @@
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content" style="min-height:393px">
+
+
+  <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <a href="index.html">Home</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <span>General</span>
+                </li>
+            </ul>
+            <!-- Here show dropdown -->
+            <div class="page-toolbar">
+            
+            </div>  
+        </div>
+        <h3 class="page-title"> Student
+            <small>Student Add</small>
+        </h3>
+        <div *ngIf="show_msg_bool == 1" [innerHTML]="html_msg">
+
+            </div>
+
+
+        <div class="invoice-content-2 bordered">
+
+                <form [formGroup]="new_student_form_data" method="post" >
+                        <div class="form-body ">
+                        <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="text" class="input_search form-control" formControlName="name" name="name" required>
+                        <label for="form_control_1">Name<span class="required_field">*</span></label>
+                     </div>
+                        <div class="form-group form-md-line-input form-md-floating-label">
+                        <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="email" class="form-control input_search" name="email" formControlName="email" required>
+                        <label for="form_control_1">Email</label>
+                        
+                     </div>
+
+                     <div class="form-group form-md-line-input form-md-floating-label">
+                            <input type="password" class="input_search form-control" formControlName="password" name="password" required>
+                            <label for="form_control_1">Password<span class="required_field">*</span></label>
+                         </div>
+
+                     
+                        
+                       <div class="form-actions">
+                       <div class="row">
+                       <div class="col-md-12">
+                       <input type="submit" class="btn btn-dark" (click)="add_new_student_data()" value="Add Student" name="btn_add_instructor" [disabled]="new_course_form_data.get('name').invalid || new_course_form_data.get('password').invalid" class="btn btn-primary">
+                       <button type="reset" class="btn default">Reset</button>
+                    </div>
+                    </div>
+                    </div>
+                   </div>
+                 </div>
+               </form>
+                 <!-- END CONTENT BODY -->
+        <!-- END CONTENT BODY -->
+    </div>
+
+
+        </div>
+        </div>
+        

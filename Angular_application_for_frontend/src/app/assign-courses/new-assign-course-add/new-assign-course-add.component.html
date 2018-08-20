@@ -1,0 +1,89 @@
+<div class="page-content-wrapper">
+
+        <div [ngClass]="{'page-content':!canload,'loader':canload,'loader_style':!canload}">
+                <div [style.display]="canload ? 'none':'block'" [ngClass]="{'loader_style':!canload}">
+                    <img src="assets/images/loader2.gif" >
+                </div>
+               </div>
+    <!-- BEGIN CONTENT BODY -->
+    
+    <div class="page-content"  [ngClass]="{'page-content':canload,'loader':!canload}" style="min-height:393px">
+
+
+  <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <a href="index.html">Home</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <span>General</span>
+                </li>
+            </ul>
+            <!-- Here show dropdown -->
+            <div class="page-toolbar">
+            
+            </div>  
+        </div>
+        <h3 class="page-title"> Assign Course
+            <small>Assign Course To Instructor</small>
+        </h3>
+        <div *ngIf="show_msg_bool == 1" [innerHTML]="html_msg">
+
+            </div>
+
+
+        <div class="invoice-content-2 bordered">
+
+                <form [formGroup]="new_course_assign_form_data" method="post" >
+                        <div class="form-body ">
+                            <div class="form-group form-md-line-input  ">
+                                <select class="form-control" formControlName="user_id" id="form_control_1">
+                                    <option value="">Please Choose</option>
+                                    <option [value]="info.id" *ngFor="let info of data['instructors']">{{info.name}}</option>
+                                </select>
+                                <label for="form_control_1">Choose Instructor<span class="required_field">*</span></label>
+                            </div>
+
+                            <div class="form-group form-md-line-input  ">
+                                <select class="form-control" formControlName="course_id" id="form_control_1">
+                                        <option value="">Please Choose</option>
+                                        <option [value]="info.id" *ngFor="let info of data['courses']">{{info.course_name}}</option>
+                                    </select>
+                                    <label for="form_control_1">Choose Course<span class="required_field">*</span></label>
+                            </div>
+                            <div class="form-group form-md-line-input  ">
+                                <select class="form-control" formControlName="program_id" id="form_control_1">
+                                        <option value="">Please Choose</option>
+                                        <option [value]="info.id" *ngFor="let info of data['program']">{{info.program_name}}</option>
+                                    </select>
+                                    <label for="form_control_1">Choose Program<span class="required_field">*</span></label>
+                            </div>
+                            <div class="form-group form-md-line-input  ">
+                                <select class="form-control" formControlName="smester_id" id="form_control_1">
+                                        <option value="">Please Choose</option>
+                                        <option [value]="info.id" *ngFor="let info of data['smester']">{{info.semester_no}}</option>
+                                    </select>
+                                    <label for="form_control_1">Choose Smester<span class="required_field">*</span></label>
+                            </div>
+                     
+                        
+                       <div class="form-actions">
+                       <div class="row">
+                       <div class="col-md-12">
+                       <input type="submit" class="btn btn-dark" (click)="add_new_course_assign_data()" value="Assign Course" name="btn_add_instructor" [disabled]="new_course_assign_form_data.get('user_id').invalid || new_course_assign_form_data.get('course_id').invalid || new_course_assign_form_data.get('program_id').invalid || new_course_assign_form_data.get('smester_id').invalid" class="btn btn-primary">
+                       <button type="reset" class="btn default">Reset</button>
+                    </div>
+                    </div>
+                     
+                   </div>
+                 </div>
+               </form>
+                 <!-- END CONTENT BODY -->
+        <!-- END CONTENT BODY -->
+    </div>
+
+
+        </div>
+        </div>
+        

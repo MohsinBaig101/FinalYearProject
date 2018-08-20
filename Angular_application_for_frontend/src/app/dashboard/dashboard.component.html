@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="header">
+      
+      <ul>
+      <li class="icon">
+        <div class="col-md-1 col-2">
+        <div class="navbar-light bg-lignt dropdown">
+          <button class="navbar-toggler" (click)="ShowDropdown()" type="button" style="cursor:pointer;">
+            <span class="navbar-toggler-icon my-toggler"></span>
+          </button>
+        </div>
+      </div>
+    </li>
+    <li class="col-md-1 offset-10 logoutDrop">profile
+        <ul>
+          <li>profile</li>
+          <li>Logout</li>
+        </ul>
+    </li>
+    </ul>
+  </div>
+  </div>
+  <div class="row">
+    <!-- side bar -->
+    <div class="col-md-2 menu"  [class.sidebarmenu]="isDropdown">
+      <div>
+          <nav class="sidebar col-md-2">
+            <!-- mazhariqbal w nazar M -->
+              <ul>
+                <!-- 220623959 rupess 52307
+                0346-2497680 amjad jutt -->
+              <li class="showopt"><p class="showHide" (click)="ShowDropdown()">×</p></li>
+              <li><a (click)="moveTohome()">Dashboard</a></li>
+              <li><a (click)="moveToTeacher()"><span class="glyphicon glyphicon-user"></span>Teacher's</a></li>
+              <li><a (click)="moveTocourse()">Courses</a></li>
+              <li><a (click)="moveToSmester()">Smester's</a></li>
+              <li><a (click)="moveToWeak()">WeekDay</a></li>
+              <li><a (click)="moveToProgram()">Program's</a></li>
+              <li><a (click)="moveToTeacher()">Create TimeTable</a></li>     
+              </ul>   
+          </nav> 
+        </div>
+    </div>  
+    <!-- end side bar -->
+  </div>
+  <div class="row pageSetting" [class.pageSetup]="isPageSetup">
+    <div class="col-md-12 col-12">
+      <!-- every component own <div class="row" every component starting add new row ok got it -->
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+
+
+
+<!-- <div class="navbar-light bg-lignt">
+    <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon my-toggler"></span>
+    </button>
+  </div> -->
+
+</div>

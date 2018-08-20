@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-12">
+      <hr>
+      <div class="row">
+        <div class="col-md-11 col-8 offset-1">
+          <h2 class="StmentNew">Add New Programs</h2>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-3">
+      <form [formGroup]="formfield">
+        <div class="form-group">
+          <label>Enter the Programe Name</label>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control input_search" formControlName="programeName" name="programeName" required>
+          <p *ngIf="formfield.get('programeName').invalid && formfield.get('programeDescription').dirty" class="alert alert-danger">hy g</p>
+        </div>
+       
+        <div class="form-group">
+          <label>Enter the Programe Description</label>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control input_search" name="programeDescription" formControlName="programeDescription" required>
+            <p *ngIf="formfield.get('programeDescription').invalid && formfield.get('programeDescription').dirty" class="alert alert-danger">hy g</p>
+          </div>
+          <!-- <div class="form-group">
+              <label>Select the Teacher   ::</label>
+              <select class="form-control" name="teacherName" formControlName="teacherName">
+                <option>Sir Imran sahab</option>
+                <option>Sir Zaigham sahab</option>
+              </select>
+            </div> -->
+        
+            
+            <div class="form-group">
+              <input type="submit" [disabled]="formfield.get('programeDescription').invalid || formfield.get('programeName').invalid" value="Add subject" name="Datasubject" class="btn btn-primary">
+              <input type="reset" value="Reset Value" class="btn btn-primary">
+            </div>
+      </form>
+    </div>
+  </div>
+  

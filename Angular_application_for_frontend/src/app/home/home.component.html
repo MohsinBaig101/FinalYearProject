@@ -1,0 +1,356 @@
+      <!-- FOR TOP <HEADER></HEADER> -->
+      <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="index.html">
+                        <!-- <h3 class="green" style="margin-top:5px; color:white;">Time Scheduling</h3> -->
+                        <img src="../assetss/layouts/layout/img/logo.png" alt="logo" class="logo-default"> </a> 
+                    <div class="menu-toggler sidebar-toggler"> </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- BEGIN NOTIFICATION DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                         
+                        <!-- END NOTIFICATION DROPDOWN -->
+                        <!-- BEGIN INBOX DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        
+                         
+                        <!-- END TODO DROPDOWN -->
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg">
+                                <span class="username username-hide-on-mobile"> Admin </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="page_user_profile_1.html">
+                                        <i class="icon-user"></i> My Profile </a>
+                                </li>
+                                <li>
+                                    <a href="app_calendar.html">
+                                        <i class="icon-calendar"></i> My Calendar </a>
+                                </li>
+                                <li>
+                                    <a href="app_inbox.html">
+                                        <i class="icon-envelope-open"></i> My Inbox
+                                        <span class="badge badge-danger"> 3 </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="app_todo.html">
+                                        <i class="icon-rocket"></i> My Tasks
+                                        <span class="badge badge-success"> 7 </span>
+                                    </a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li>
+                                    <a href="page_user_lock_1.html">
+                                        <i class="icon-lock"></i> Lock Screen </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" (click)="logout()">
+                                        <i class="icon-key"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-quick-sidebar-toggler">
+                            <a href="javascript:;" (click)="logout()" class="dropdown-toggle">
+                                <i class="icon-logout"></i>
+                            </a>
+                        </li>
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END HEADER INNER -->
+            </div>
+          
+          <div class="clearfix"> </div>
+          <div class="page-container">
+          
+          <!-- side bar code -->
+          <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+        
+                    <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px; width:235px">
+                       <li class="sidebar-toggler-wrapper hide">
+                            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                            <div class="sidebar-toggler"> </div>
+                            <!-- END SIDEBAR TOGGLER BUTTON -->
+                        </li>
+                        <li class="sidebar-search-wrapper">
+                            <form class="sidebar-search  " action="page_general_search_3.html" method="POST">
+                                <a href="javascript:;" class="remove">
+                                    <i class="icon-close"></i>
+                                </a>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <a href="javascript:;" class="btn submit">
+                                            <i class="icon-magnifier"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </form>
+                            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                        </li>
+                        <li class="nav-item start ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title" (click)="dashboard()">Dashboard</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <!-- <ul class="sub-menu">
+                                <li class="nav-item start ">
+                                    <a href="index.html" class="nav-link ">
+                                        <i class="icon-bar-chart"></i>
+                                        <span class="title">Dashboard 1</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="dashboard_2.html" class="nav-link ">
+                                        <i class="icon-bulb"></i>
+                                        <span class="title">Dashboard 2</span>
+                                        <span class="badge badge-success">1</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item start ">
+                                    <a href="dashboard_3.html" class="nav-link ">
+                                        <i class="icon-graph"></i>
+                                        <span class="title">Dashboard 3</span>
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li class="heading">
+                            <h3 class="uppercase">Features</h3>
+                        </li>
+                        <li class="nav-item  ">
+                            <a  class="nav-link nav-toggle">
+                                <i class="icon-diamond"></i>
+                                <span class="title">Instructor</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a (click)="moveToTeacher_add()" class="nav-link ">
+                                        <span class="title">Add Instructor</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a (click)="moveToTeacher()" class="nav-link ">
+                                        <span class="title">Manage Instructors</span>
+                                    </a>
+                                </li>
+                                
+                                 
+                               
+                                
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item  ">
+                                <a  class="nav-link nav-toggle">
+                                    <i class="icon-diamond"></i>
+                                    <span class="title">Students</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a (click)="moveToStudent_add()" class="nav-link ">
+                                            <span class="title">Add Student</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a (click)="moveToStudents()" class="nav-link ">
+                                            <span class="title">Manage Students</span>
+                                        </a>
+                                    </li>
+                                    
+                                     
+                                   
+                                    
+                                </ul>
+                            </li>
+    
+                        <li class="nav-item  ">
+                                <a  class="nav-link nav-toggle">
+                                    <i class="icon-diamond"></i>
+                                    <span class="title">Courses</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item  ">
+                                        <a (click)="moveToCourse_add()" class="nav-link ">
+                                            <span class="title">Add Course</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item  ">
+                                        <a (click)="moveToCourses()" class="nav-link ">
+                                            <span class="title">Manage Courses</span>
+                                        </a>
+                                    </li>
+                                    
+                                     
+                                   
+                                    
+                                </ul>
+                            </li>
+    
+                            <li class="nav-item  ">
+                                    <a  class="nav-link nav-toggle">
+                                        <i class="icon-diamond"></i>
+                                        <span class="title">Programs</span>
+                                        <span class="arrow"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item  ">
+                                            <a (click)="moveToProgram_add()" class="nav-link ">
+                                                <span class="title">Add Program</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item  ">
+                                            <a (click)="moveToPrograms()" class="nav-link ">
+                                                <span class="title">Manage Programs</span>
+                                            </a>
+                                        </li>
+                                        
+                                         
+                                       
+                                        
+                                    </ul>
+                                </li>
+    
+                                <li class="nav-item  ">
+                                        <a  class="nav-link nav-toggle">
+                                            <i class="icon-diamond"></i>
+                                            <span class="title">Smester</span>
+                                            <span class="arrow"></span>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item  ">
+                                                <a (click)="moveToSmesters_add()" class="nav-link ">
+                                                    <span class="title">Add Smester</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item  ">
+                                                <a (click)="moveToSmesters()" class="nav-link ">
+                                                    <span class="title">Manage Semesters</span>
+                                                </a>
+                                            </li>
+                                            
+                                             
+                                           
+                                            
+                                        </ul>
+                                    </li>
+    
+                                    <li class="nav-item  ">
+                                            <a  class="nav-link nav-toggle">
+                                                <i class="icon-diamond"></i>
+                                                <span class="title">Rooms</span>
+                                                <span class="arrow"></span>
+                                            </a>
+                                            <ul class="sub-menu">
+                                                <li class="nav-item  ">
+                                                    <a (click)="moveToRooms_add()" class="nav-link ">
+                                                        <span class="title">Add Room</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item  ">
+                                                    <a (click)="moveToRooms()" class="nav-link ">
+                                                        <span class="title">Manage Rooms</span>
+                                                    </a>
+                                                </li>
+                                                
+                                                 
+                                               
+                                                
+                                            </ul>
+                                        </li>
+    
+                                        <li class="nav-item  ">
+                                            <a  class="nav-link nav-toggle">
+                                                <i class="icon-diamond"></i>
+                                                <span class="title">Assign Courses</span>
+                                                <span class="arrow"></span>
+                                            </a>
+                                            <ul class="sub-menu">
+                                                <li class="nav-item  ">
+                                                    <a (click)="moveToCourse_Assign_add()" class="nav-link ">
+                                                        <span class="title">Assign Courses</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item  ">
+                                                    <a (click)="moveToCourseAssign()" class="nav-link ">
+                                                        <span class="title">Manage Assign Courses</span>
+                                                    </a>
+                                                </li>
+                                                
+                                                 
+                                               
+                                                
+                                            </ul>
+                                        </li>
+
+
+
+                                        <li class="nav-item  ">
+                                                <a  class="nav-link nav-toggle">
+                                                    <i class="icon-diamond"></i>
+                                                    <span class="title">TimeTable</span>
+                                                    <span class="arrow"></span>
+                                                </a>
+                                                <ul class="sub-menu">
+                                                    <li class="nav-item  ">
+                                                        <a (click)="moveTo_timetable_add()" class="nav-link ">
+                                                            <span class="title">Create TimeTable</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item  ">
+                                                        <a (click)="moveTo_view_timetable()" class="nav-link ">
+                                                            <span class="title">View TimeTable</span>
+                                                        </a>
+                                                    </li>
+                                                    
+                                                     
+                                                   
+                                                    
+                                                </ul>
+                                            </li>
+    
+                       
+                       
+                        
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- page render -->
+    
+          
+    
+            <router-outlet></router-outlet>
+        </div>    

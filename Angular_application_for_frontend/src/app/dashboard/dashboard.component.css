@@ -1,0 +1,148 @@
+.header
+{
+  /* background-color: #46b2e7d2; */
+  background-color: #0067A4;
+  width: 100%;
+  position: fixed;
+  height: 60px;
+  z-index:1;
+}
+.header ul li
+{
+  list-style: none;
+  float: left;
+}
+.icon
+{
+  margin-top: 10px;
+  margin-left: -50px;
+}
+.logo {
+  text-align: left !important;
+  font-size: 22px;
+  padding-left: 20px;
+  line-height: 50px !important;
+}
+
+
+.pageSetting
+{
+  margin-left:213px;
+  margin-top:60px;
+}
+.pageSetup
+{
+  margin-left:0px;
+}
+.sidebar
+{
+  margin-left: -18px;
+}
+.sidebarmenu
+  {
+    display: none;
+    width: 0%;
+    height: 0%;
+  }
+  .sidebar ul
+  {
+    padding: 10px;
+  }
+  .sidebar ul li a
+{
+  list-style: none;
+  display: block;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  margin: 9px;
+  text-align: center;
+  margin-left: -80px;
+  cursor: pointer;
+  border-top: 1px solid #758e9ad2;
+}
+.showHide
+{
+  list-style: none;
+  display: block;
+  width: 55px;
+  height: 55px;
+  line-height: 0.8;
+  font-size: 50px;
+  text-align: center;
+  cursor: pointer;
+  margin: 9px;
+}
+.showHide:hover
+{
+  color: #46b2e7d2;
+  background-color: #ccc;
+}
+.menu {
+  /* background-color: #46b2e7d2; */
+  background-color: white;
+  position: fixed;
+  color: #e1ffff;
+  padding: 0px;
+  min-width: 242px;
+  z-index: 1;
+   
+  height: 100%;
+}
+.sidebar ul li a:hover
+{
+  margin-top: 5px;
+  /* border-left: 5px solid White; */
+}
+.showopt
+{
+  margin-left: 150px;
+  list-style: none;
+}
+.logoutDrop
+{
+  display: none;
+}
+  @media (max-width:786px)
+{
+  .menu
+  {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: 0px;
+  }
+  .sidebarmenu
+  {
+    display: none;
+    width: 0%;
+    height: 0%;
+  }
+  .pageSetting
+  {
+    margin-left:0px;
+    margin-top:60px;
+  }
+  .showopt
+  {
+    display: none;
+  }
+}
+@media (max-width:786px)
+{
+  .sidebar
+  {
+    margin-top:40px;
+    margin-left: 0px;
+    z-index: 1;
+    /* background-color: #46b2e7d2; */
+    background-color: #6f7378;
+  }
+  .topheader
+  {
+    margin: 0px;
+    position: fixed;
+    width: 340px;
+    display: none;
+  }
+}

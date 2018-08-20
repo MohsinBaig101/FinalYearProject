@@ -1,0 +1,67 @@
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content" style="min-height:393px">
+
+
+  <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <a href="javascript:;">Rooms</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <span>Add Room</span>
+                </li>
+            </ul>
+            <!-- Here show dropdown -->
+            <div class="page-toolbar">
+            
+            </div>  
+        </div>
+        <h3 class="page-title"> Room
+            <small>Room Add</small>
+        </h3>
+        <div *ngIf="show_msg_bool == 1" [innerHTML]="html_msg">
+
+            </div>
+
+
+        <div class="invoice-content-2 bordered">
+
+                <form [formGroup]="new_room_form_data" method="post">
+                        <div class="form-body ">
+                    <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="text" class="input_search form-control" formControlName="room_name" name="room_name" required>
+                        <label for="form_control_1">Room Name<span class="required_field">*</span></label>
+                     </div>
+                    
+                         
+                     <div class="form-group form-md-line-input form-md-floating-label">
+                            <select class="form-control" formControlName="room_type">
+                                <option [value]="1" [selected]="true">Room</option>
+                                <option [value]="2">Lab</option>
+                            </select>
+                            <!-- <label for="form_control_1">Room type</label> -->
+                            <span class="help-block">e.g room or lab</span>
+                        </div>
+                     
+                        
+                       <div class="form-actions">
+                       <div class="row">
+                       <div class="col-md-12">
+                       <input type="submit" class="btn btn-dark" (click)="add_new_room_data()" value="Add room" name="btn_room" [disabled]="new_room_form_data.get('room_name').invalid" class="btn btn-primary">
+                       <button type="reset" class="btn default">Reset</button>
+                    </div>
+                    </div>
+                    </div>
+                 
+                 </div>
+               </form>
+                 <!-- END CONTENT BODY -->
+        <!-- END CONTENT BODY -->
+    </div>
+
+
+        </div>
+        </div>
+        

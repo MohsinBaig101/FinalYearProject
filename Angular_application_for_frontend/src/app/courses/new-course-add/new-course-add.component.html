@@ -1,0 +1,62 @@
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content" style="min-height:393px">
+
+
+  <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <a href="javascript:;">Courses</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <span>Add Course</span>
+                </li>
+            </ul>
+            <!-- Here show dropdown -->
+            <div class="page-toolbar">
+            
+            </div>  
+        </div>
+        <h3 class="page-title"> Course
+            <small>Course Add</small>
+        </h3>
+        <div *ngIf="show_msg_bool == 1" [innerHTML]="html_msg">
+
+            </div>
+
+
+        <div class="invoice-content-2 bordered">
+
+                <form [formGroup]="new_course_form_data" method="post" >
+                        <div class="form-body ">
+                        <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="text" class="input_search form-control" formControlName="course_name" name="course_name" required>
+                        <label for="form_control_1">Course Name</label>
+                     </div>
+                        <div class="form-group form-md-line-input form-md-floating-label">
+                        <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="text" class="form-control input_search" name="course_code" formControlName="course_code" required>
+                        <label for="form_control_1">Course Code</label>
+                        
+                     </div>
+                        
+                       <div class="form-actions">
+                       <div class="row">
+                       <div class="col-md-12">
+                       <input type="submit" class="btn btn-dark" (click)="add_new_teacher_data()" value="Add Course" name="btn_add_instructor" [disabled]="new_course_form_data.get('course_code').invalid || new_course_form_data.get('course_name').invalid" class="btn btn-primary">
+                       <button type="reset" class="btn default">Reset</button>
+                    </div>
+                    </div>
+                    </div>
+                   </div>
+                 </div>
+               </form>
+                 <!-- END CONTENT BODY -->
+        <!-- END CONTENT BODY -->
+    </div>
+
+
+        </div>
+        </div>
+        

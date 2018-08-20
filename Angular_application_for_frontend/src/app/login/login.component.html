@@ -1,0 +1,38 @@
+<div class="login">
+        <div class="logo">
+                <a href="index.html">
+                    <img src="../assets/pages/img/logo-big.png" alt=""> </a>
+            </div>
+
+            <div class="content" >
+
+                    
+                    <!-- BEGIN LOGIN FORM -->
+                    <form class="login-form" [formGroup]="loginAttribute" method="post">
+                        <h3 class="form-title font-green">Sign In</h3>
+                        <div *ngIf="show_msg_bool == 1" [innerHTML]="html_msg">
+
+                            </div>
+                        <div class="form-group">
+                            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                            <label class="control-label visible-ie8 visible-ie9">Username</label>
+                            <input name="email" formControlName="email" class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Email"> </div>
+                        <div class="form-group">
+                            <label class="control-label visible-ie8 visible-ie9">Password</label>
+                            <input  name="password" formControlName="Password" class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"> </div>
+                        <div class="form-actions">
+                            <button type="submit" [disabled]="loginAttribute.get('Password').invalid || loginAttribute.get('email').invalid " name="SignIn" (click)="submit()" class="btn green uppercase">Login</button>
+                            <label class="rememberme check">
+                                <div class="checker"><span class=""><input type="checkbox" name="remember" value="1"></span></div>Remember </label>
+                            <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                        </div>
+                        
+                    </form>
+                    <!-- END LOGIN FORM -->
+                  <a href="javascript:;" class="" (click)="back()">back</a>
+                </div>
+
+
+                <div class="copyright"> 2014 © Metronic. Admin Dashboard Template. </div>
+            
+</div>
