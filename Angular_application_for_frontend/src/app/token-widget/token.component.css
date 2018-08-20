@@ -1,0 +1,41 @@
+.backgroundimg
+{
+    background-image: url('../../assets/backgroundimg.jpg');
+    padding-bottom: 161px;
+}
+.form-login
+{
+    margin-top: 296px;
+     
+}
+.role-selected
+{
+    margin-left: 1px;
+}
+.remember_me
+{
+    margin-left: 12px;
+}
+.input_search:focus
+{
+    box-shadow: none;
+    border-left:5px solid #007bff;
+}
+.input_search.ng-invalid.ng-touched
+{
+	border-left: 5px solid rgb(204, 16, 16);
+}
+
+.signincolor
+{
+	color: #007bff;
+}
+.SignInSetting
+{
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+.fieldsetting
+{
+	margin-top:20px;
+}

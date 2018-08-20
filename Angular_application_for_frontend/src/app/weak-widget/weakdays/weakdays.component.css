@@ -1,0 +1,11 @@
+.insertNewSubject
+{
+    display: block;
+    margin-top: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.tableSetting
+{
+    margin-top: 40px;
+}

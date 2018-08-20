@@ -1,0 +1,551 @@
+<div class="page-content-wrapper" >
+<div class="page-content">
+
+        <div class="page-bar">
+                <ul class="page-breadcrumb">
+                        <li>
+                                <a href="index.html">Home</a>
+                                <i class="fa fa-circle"></i>
+                            </li>  <li>
+                                    <a href="index.html">TimeTable Create</a>
+                                    <i class="fa fa-circle"></i>
+                                </li>
+                 
+                </ul>
+                
+              
+            </div>
+
+            <h3 class="page-title"> Basic Datatables
+                    <small>basic datatable samples</small>
+                </h3>
+
+        <div class="portlet-body">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                <h3 class="page-title"> Please choose the class
+                        <!-- <small>basic datatable samples</small> -->
+                    </h3>
+                <form [formGroup]="isfetching" method="post" >
+                        <div class="form-body ">
+                            <div class="form-group form-md-line-input  ">
+                                <select class="form-control" formControlName="program_id" id="form_control_1">
+                                        <option value="">Please Choose</option>
+                                        <option [value]="info.id" *ngFor="let info of data['program']">{{info.program_name}}</option>
+                                    </select>
+                                    <label for="form_control_1">Choose Program<span class="required_field">*</span></label>
+                            </div>
+                            <div class="form-group form-md-line-input  ">
+                                <select class="form-control" formControlName="smester_id" id="form_control_1">
+                                        <option value="">Please Choose</option>
+                                        <option [value]="info.id" *ngFor="let info of data['smester']">{{info.semester_no}}</option>
+                                    </select>
+                                    <label for="form_control_1">Choose Smester<span class="required_field">*</span></label>
+                            </div>
+                     
+                        
+                       <div class="form-actions">
+                       <div class="row">
+                       <div class="col-md-12">
+                       <input type="submit" class="btn btn-dark" (click)="get_class_data()" value="Assign Course" name="btn_add_instructor" [disabled]="isfetching.get('program_id').invalid || isfetching.get('smester_id').invalid" class="btn btn-primary">
+                       <button type="reset" class="btn default">Reset</button>
+                    </div>
+                    </div>
+                     
+                   </div>
+                 </div>
+               </form>
+                </div>
+                </div>
+                
+                
+
+
+
+
+
+
+
+
+
+                <div class="table-scrollable table_style">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                              
+                                <th> Monday </th>
+                                <th> Tuesday </th>
+                                <th> Wednessday </th>
+                                <th> Thursday </th>
+                                <th> Friday </th>
+                                <th> Saturday </th>
+                                <th> Sunday </th>
+                                <!-- <th> Status </th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                                <td [dragula]='"bag-task1"' id="23" style="height:112px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="monday(1)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+                                </td>
+                                <td [dragula]='"bag-task1"' id="211" style="height:112px">
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="tuesday(2)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+
+                                  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="wednessday(3)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="thursday(4)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="friday(5)"  *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="saturday(6)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="sunday(7)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                
+                            </tr>
+
+                             <tr>
+                                
+                                <td [dragula]='"bag-task1"' id="23" style="height:112px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="monday(1)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+                                </td>
+                                <td [dragula]='"bag-task1"' id="211" style="height:112px">
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="tuesday(2)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+
+                                  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="wednessday(3)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="thursday(4)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="friday(5)"  *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="saturday(6)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="sunday(7)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                
+                            </tr>
+
+                             <tr>
+                                
+                                <td [dragula]='"bag-task1"' id="23" style="height:112px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="monday(1)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+                                </td>
+                                <td [dragula]='"bag-task1"' id="211" style="height:112px">
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="tuesday(2)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+
+                                  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="wednessday(3)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="thursday(4)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="friday(5)"  *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="saturday(6)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="sunday(7)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                
+                            </tr>
+                            
+
+                             <tr>
+                                
+                                <td [dragula]='"bag-task1"' id="23" style="height:112px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="monday(1)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+                                </td>
+                                <td [dragula]='"bag-task1"' id="211" style="height:112px">
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="tuesday(2)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+
+                                  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="wednessday(3)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="thursday(4)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="friday(5)"  *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="saturday(6)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="sunday(7)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                
+                            </tr>
+
+                             <tr>
+                                
+                                <td [dragula]='"bag-task1"' id="23" style="height:112px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="monday(1)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+                                </td>
+                                <td [dragula]='"bag-task1"' id="211" style="height:112px">
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="tuesday(2)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+
+                                  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="wednessday(3)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="thursday(4)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="friday(5)"  *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="saturday(6)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="sunday(7)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                
+                            </tr>
+
+                             <tr>
+                                
+                                <td [dragula]='"bag-task1"' id="23" style="height:112px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="monday(1)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+                                </td>
+                                <td [dragula]='"bag-task1"' id="211" style="height:112px">
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="tuesday(2)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+
+                                  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="wednessday(3)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="thursday(4)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="friday(5)"  *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="saturday(6)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="sunday(7)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                
+                            </tr>
+
+                             <tr>
+                                
+                                <td [dragula]='"bag-task1"' id="23" style="height:112px">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="monday(1)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+                                </td>
+                                <td [dragula]='"bag-task1"' id="211" style="height:112px">
+                                   <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="tuesday(2)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>
+
+                                  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="wednessday(3)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="thursday(4)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="friday(5)"  *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px"> <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="saturday(6)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div>  </td>
+                                <td [dragula]='"bag-task1"' style="height:112px">  <div class="row">
+                                    <div class="col-md-12">
+                                        <button style="float:right" (click)="sunday(7)" *ngIf="button_bool == 1" class="btn_time" value="" name=""><i class="fa fa-check"></i> </button>   
+                                    </div>
+                                </div> </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+       <!-- drag and drop -->
+   <div style="background-color:white;" class="row">
+         
+        
+        <div>{{html_msg}}</div>
+                <div class="" *ngIf="boll == 1">
+                    <div class="col-md-3 bg-grey mt-step-col box_style"      *ngFor="let info of classdetails['data']; let i = index">
+                            <div class="card"   [dragula]='"bag-task1"'>
+                                
+                                    <div class="card-body">
+                                            <!-- <div style="display:none">
+                                    
+                                                    $arr[0]={{info[1]}}
+                                                    $arr[1]={{info[3]}}
+                                                    $arr[1]={{info[5]}}
+                                                    $arr[] = {{info[7]}}
+                                                    
+                                                </div>   -->
+                                      <h5 class="card-title"   style="color:red">{{info[2]}}</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted" style="color:dodgerblue">{{info[0]}}</h6>
+                                      <p class="card-text">{{info[4]}} {{info[7]}}</p>
+                                     <b>{{start_time[i]}} {{start_date[i]}}</b><br>
+                                       <b>{{end_time[i]}} {{end_date[i]}}</b>
+                                       <!-- <b>Room Assign </b> -->
+                                       <p><b>{{room[i]}}</b></p>
+
+                                    </div>
+                                  </div>
+
+                                  <div class="">
+                                       
+                                      <h4>Class Set Time</h4>
+                                      <input type="time" [(ngModel)]="start_time[i]">
+                                      <input type="date" [(ngModel)]="start_date[i]">
+                                      <input type="time" [(ngModel)]="end_time[i]">
+                                      <input type="date" [(ngModel)]="end_date[i]">
+                                  </div>
+                                  <div class="">
+                                    <p class="card-text">Room assign</p>
+                                    <select class="form-control" [(ngModel)]="room[i]">
+                                        <option>please choose</option>
+                                        <option *ngFor="let info of classdetails['room']">{{info.room_name}}  type:{{info.fk_db_key==1 ? 'room' : 'lab'}}</option>
+                                    </select>
+                                  </div>
+                                  <!-- <a href="javascript:;"  (click)="get_field_name(i)" data-url="" data-toggle="modal" href="#edit_teacher_detail"  class="btn blue"><i class="fa fa-edit"></i>Class Timing</a> -->
+                        </div>
+                        
+                        </div>
+
+     </div>
+
+
+
+            </div>
+
+     
+
+
+
+
+</div>
+</div>      
+
+
+
+<div class="modal fade " id="edit_teacher_detail" tabindex="-1" role="basic" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog   " >
+                  <div class="modal-content  " >
+      
+      
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                          <h4 class="modal-title" style="margin-top:20px">Class Timing Set</h4>
+                      </div>
+      
+                        
+                      
+                      <div class="portlet light portlet-fit portlet-form bordered">
+                             
+                              <div class="portlet-body">
+                                  <!-- BEGIN FORM-->
+                                  <form [formGroup]="insupdate" method="post" >
+                                      <div class="form-body">
+                                           
+                                                    <div class="row">
+                                                        <div class="col-md-3"><p><b> Class Starting Time</b></p></div>
+                                                        <div class="col-md-4">
+                                                           
+                                                          
+                                                            <div class="">  
+                                                                <input formControlName="start_time" [(ngModel)]="username" type="time" class="form-control">
+                                                             </div>   
+                                                        </div>
+                                                        <!-- /.col-md-6 -->
+                                                        <div class="col-md-4">
+                                                            <div class="">
+                                                                <input type="date" formControlName="start_date" class="form-control">
+                                                                
+                                                            </div>
+                                                             
+                                                        </div>
+                                                        
+                                                    </div>
+
+
+                                                     <div class="row">
+                                                        <div class="col-md-5">
+                                                            <div class="">  
+                                                                <input formControlName="end_time" type="time" class="form-control">
+                                                             </div>   
+                                                        </div>
+                                                        <!-- /.col-md-6 -->
+                                                        <div class="col-md-5">
+                                                            <div class="">
+                                                                <input type="date" formControlName="end_date" class="form-control">
+                                                                
+                                                            </div>
+                                                             
+                                                        </div>
+                                                        
+                                                    </div>
+                                                     
+                                               
+                                          
+                                             
+                                         </div>
+                                         
+                                         <div class="modal-footer">
+                                              <button type="submit" data-dismiss="modal" (click)="appent_html()"  name="btn_edit_department"[disabled]="insupdate.get('course_name').untoched" value="submit" class="btn green">Set Time</button>
+                                              <button type="button" class="btn dark btn-outline" data-dismiss="modal">Cancel</button>
+                      
+                                          </div>
+                                         
+                                     
+                                  </form>
+                                  <!-- END FORM-->
+                              </div>
+                          </div>
+   
+                  </div>
+                  <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+          </div>

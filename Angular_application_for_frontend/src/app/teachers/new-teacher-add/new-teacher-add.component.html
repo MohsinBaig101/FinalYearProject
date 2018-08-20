@@ -1,0 +1,97 @@
+<div class="page-content-wrapper">
+
+
+
+ <!-- drag and drop -->
+ <!-- <div style="background-color:white;">
+         
+          <div class='' [dragula]='"bag-task1"' >
+            <div>task 1: create a new angular project using npm</div>
+            <div>task 2: move into your project folder</div>
+            <div>task 3: install ng2-dragula component in your angular project</div>
+          </div>
+          <div class='' [dragula]='"bag-task1"'>
+            <div>task 4: import the module in the app module and add it to the NgModule imports</div>
+            <div>task 5: in the app component import the Dragula service, inject it into the constructor and set dragula options</div>
+            <div>task 6: in the app template, add the html code with the property dragula and use the customized css classes</div>
+          </div>
+        
+      </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content" style="min-height:393px">
+
+
+              <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <a href="javascript:;">Instructor</a>
+                                <i class="fa fa-circle"></i>
+                            </li>
+                            <li>
+                                <span>Add Instructor</span>
+                            </li>
+                        </ul>
+                        <!-- Here show dropdown -->
+                        <div class="page-toolbar">
+                        
+                        </div>  
+                    </div>
+                    <h3 class="page-title"> Instructor
+                        <small>Instructor Add</small>
+                    </h3>
+                    <div *ngIf="show_msg_bool == 1" [innerHTML]="html_msg | keepHtml">
+
+                    </div>
+                    <div class="invoice-content-2 bordered">
+
+                    <form [formGroup]="new_teacher_form_data" method="post" >
+                       <div class="form-body ">
+                       <div class="form-group form-md-line-input form-md-floating-label">
+                       <input type="text" class="input_search form-control" formControlName="name" name="name" required>
+                       <label for="form_control_1">Name</label>
+                    </div>
+                       <div class="form-group form-md-line-input form-md-floating-label">
+                       <div class="form-group form-md-line-input form-md-floating-label">
+                       <input type="email" class="form-control input_search" name="email" formControlName="email" required>
+                       <label for="form_control_1">Email</label>
+                       <span class="help-block">Please enter email</span>
+                    </div>
+                      <div class="form-group form-md-line-input form-md-floating-label has-success">
+                      <input type="password" class="form-control input_search" name="password" formControlName="password" required>
+                      <label for="form_control_1">Password</label>
+                   </div>
+                      <div class="form-actions">
+                      <div class="row">
+                      <div class="col-md-12">
+                      <input type="submit" class="btn btn-dark" (click)="add_new_teacher_data()" value="Add Instructor" name="btn_add_instructor" [disabled]="new_teacher_form_data.get('password').invalid || new_teacher_form_data.get('name').invalid" class="btn btn-primary">
+                      <button type="reset" class="btn default">Reset</button>
+                   </div>
+                   </div>
+                   </div>
+                  </div>
+                </div>
+              </form>
+                <!-- END CONTENT BODY -->
+            </div>
+            </div>
+            </div>
+
+
+
+
+
+           
+     

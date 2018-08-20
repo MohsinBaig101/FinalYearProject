@@ -1,0 +1,26 @@
+.insertNewTeacher
+{
+    display: block;
+    margin-top: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.span_data
+{
+    position: relative;
+    top: 14px;
+    left: 18px;
+    text-align: center;
+}
+.tableSetting
+{
+    margin-top: 40px;
+}
+.updation
+{
+    display: none;
+}
+.class_center
+{
+    text-align: center;
+}
