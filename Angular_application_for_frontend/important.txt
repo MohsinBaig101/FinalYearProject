@@ -1,0 +1,4 @@
+drag and drop in angular  4 
+https://www.npmjs.com/package/ng2-dnd
+that package is installed
+==================
